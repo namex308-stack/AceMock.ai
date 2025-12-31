@@ -36,13 +36,21 @@ const Pricing = ({ header, prices, id, hasBackground = false }: PricingProps) =>
                         <p className="font-light sm:text-lg text-gray-600 dark:text-slate-400">{subtitle}</p>
                       )}
                       <div className="my-8">
-                        <div className="flex items-center justify-center text-center mb-1">
-                          <span className="text-5xl">$</span>
-                          <span className="text-6xl font-extrabold">{price}</span>
-                        </div>
-                        <span className="text-base leading-6 lowercase text-gray-600 dark:text-slate-400">
-                          {period}
-                        </span>
+                        {period === 'contact us' ? (
+                          <div className="flex items-center justify-center text-center mb-1">
+                            <span className="text-2xl font-extrabold">Contact Us</span>
+                          </div>
+                        ) : (
+                          <>
+                            <div className="flex items-center justify-center text-center mb-1">
+                              <span className="text-5xl">$</span>
+                              <span className="text-6xl font-extrabold">{price}</span>
+                            </div>
+                            <span className="text-base leading-6 lowercase text-gray-600 dark:text-slate-400">
+                              {period}
+                            </span>
+                          </>
+                        )}
                       </div>
                       {items && (
                         <div className="my-8 md:my-10 space-y-2 text-left">

@@ -4,15 +4,22 @@ import {
   IconBrandLinkedin,
   IconBrandTailwind,
   IconBrandTwitter,
+  IconBrain,
   IconBulb,
+  IconBriefcase,
+  IconChartLine,
   IconCheck,
   IconClock,
   IconComponents,
   IconDownload,
+  IconLanguage,
   IconListCheck,
   IconMail,
   IconMapPin,
+  IconMessageReport,
+  IconMicrophone,
   IconPhoneCall,
+  IconQuestionMark,
   IconRocket,
 } from '@tabler/icons-react';
 import {
@@ -41,35 +48,28 @@ import gasImg from '~/assets/images/gas.jpg';
 export const heroHome: HeroProps = {
   title: (
     <>
-      Free template for <span className="hidden md:inline">starts a website using</span> <span>Next.js</span> +{' '}
-      <span className="sm:whitespace-nowrap">Tailwind CSS</span>
+      Ace Your Next Job Interview with <span className="sm:whitespace-nowrap">AI-Powered Mock Interviews</span>
     </>
   ),
   subtitle: (
     <>
-      <span className="hidden md:inline">
-        <span className="font-semibold underline decoration-primary-600 decoration-wavy decoration-1 underline-offset-2">
-          TailNext
-        </span>{' '}
-        is a production ready template to start your new website using <em>Next.js</em> + <em>Tailwind CSS</em>.
-      </span>{' '}
-      It has been designed following Best Practices, SEO, Accessibility, Dark Mode, great Page Speed, image
-      optimization.
+      Practice realistic interviews, get instant AI feedback, improve your answers, and land your dream job.
     </>
   ),
+  // Arabic versions for future bilingual support
+  // arabicTitle: 'نجح في مقابلتك الوظيفية القادمة مع تدريبات وهمية بالذكاء الاصطناعي'
+  // arabicSubtitle: 'تدرب على مقابلات حقيقية، احصل على تقييم فوري من الذكاء الاصطناعي، حسّن إجاباتك، واحصل على وظيفتك المثالية.'
   callToAction: {
-    text: 'Get template',
-    href: 'https://github.com/onwidget/tailnext',
-    icon: IconDownload,
-    targetBlank: true,
+    text: 'Start Practicing for Free',
+    href: '/interview',
   },
   callToAction2: {
-    text: 'Learn more',
+    text: 'Watch Demo',
     href: '/',
   },
   image: {
     src: heroImg,
-    alt: 'Hero TailNext',
+    alt: 'AceMock.ai Hero',
   },
 };
 
@@ -109,71 +109,81 @@ export const featuresHome: FeaturesProps = {
   header: {
     title: (
       <>
-        What you get with <span className="whitespace-nowrap">TailNext</span>
+        Powerful Features for <span className="whitespace-nowrap">Interview Success</span>
       </>
     ),
     subtitle:
-      "Elevating Your Digital Presence: Discover the Synergies Unleashed in Our Platform's Core Strengths, from Seamless Integration to Open Collaboration.",
+      'Experience the most advanced AI-powered mock interview platform designed to help you excel in your job interviews.',
     tagline: 'Features',
   },
   items: [
     {
-      title: 'Next.Js + Tailwind CSS Integration',
+      title: 'Realistic AI Interviews',
       description:
-        'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-      icon: IconBrandTailwind,
+        'Practice with questions tailored to your target job role, industry, and experience level for authentic preparation.',
+      icon: IconBrain,
       callToAction: {
-        text: 'Discover now',
+        text: 'Try it now',
         href: '/',
       },
     },
     {
-      title: 'Ready-to-use Components',
+      title: 'Instant Detailed Feedback',
       description:
-        'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-      icon: IconComponents,
+        'Get comprehensive analysis of your responses including strengths, weaknesses, and specific improvement suggestions.',
+      icon: IconMessageReport,
       callToAction: {
-        text: 'Discover now',
+        text: 'See feedback',
         href: '/',
       },
     },
     {
-      title: 'Best Practices',
+      title: 'Multiple Job Roles',
       description:
-        'By prioritizing maintainability and scalability through coding standards and design principles, your website stays robust and efficient.',
-      icon: IconListCheck,
+        'Support for tech, management, sales, design, marketing, and many more professional roles across industries.',
+      icon: IconBriefcase,
       callToAction: {
-        text: 'Discover now',
+        text: 'Explore roles',
         href: '/',
       },
     },
     {
-      title: 'Excellent Page Speed',
+      title: 'Behavioral & Technical Questions',
       description:
-        'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-      icon: IconRocket,
+        'Comprehensive coverage of both behavioral interview questions and technical assessments for complete preparation.',
+      icon: IconQuestionMark,
       callToAction: {
-        text: 'Discover now',
+        text: 'View questions',
         href: '/',
       },
     },
     {
-      title: 'Search Engine Optimization (SEO)',
+      title: 'Voice & Text Mode',
       description:
-        "Boost online visibility with our SEO-friendly website. Effective strategies and practices enhance your website's search engine ranking, making it easier for users to find your content.",
-      icon: IconArrowsRightLeft,
+        'Answer questions by typing or speaking naturally, with advanced speech recognition for realistic practice.',
+      icon: IconMicrophone,
       callToAction: {
-        text: 'Discover now',
+        text: 'Test modes',
         href: '/',
       },
     },
     {
-      title: 'Open to new ideas and contributions',
+      title: 'Progress Tracking',
       description:
-        'We welcome new ideas and contributions to our platform. Whether you have feature suggestions, want to contribute code, or share insights, our platform is open for collaboration.',
-      icon: IconBulb,
+        'Monitor your improvement over multiple sessions with detailed analytics and performance trends.',
+      icon: IconChartLine,
       callToAction: {
-        text: 'Discover now',
+        text: 'Track progress',
+        href: '/',
+      },
+    },
+    {
+      title: 'Available in Arabic & English',
+      description:
+        'Full bilingual support with native Arabic and English interfaces for comprehensive accessibility.',
+      icon: IconLanguage,
+      callToAction: {
+        text: 'Switch language',
         href: '/',
       },
     },
@@ -404,85 +414,63 @@ export const pricingHome: PricingProps = {
   id: 'pricing-on-home',
   hasBackground: true,
   header: {
-    title: 'Prices for each plan',
+    title: 'Choose Your Plan',
     subtitle:
-      'Proin eget vestibulum sem, vel ultrices ligula. Vestibulum in eleifend lectus, non mollis odio. Donec nibh ipsum, suscipit non pulvinar quis, lobortis ac lorem.',
+      'Start practicing with our free plan or upgrade to Pro for unlimited access to advanced AI feedback and features.',
     // tagline: 'Pricing',
   },
   prices: [
     {
-      title: 'basic',
-      price: 29,
+      title: 'Free',
+      subtitle: 'Perfect for getting started',
+      price: 0,
       period: 'per month',
       items: [
-        {
-          description: 'Etiam in libero, et volutpat',
-        },
-        {
-          description: 'Aenean ac nunc dolor tristique',
-        },
-        {
-          description: 'Cras scelerisque accumsan lib',
-        },
-        {
-          description: 'In hac habitasse',
-        },
+        { description: '5 mock interviews per month' },
+        { description: 'Basic AI feedback' },
+        { description: 'Text-only mode' },
+        { description: 'Community support' },
       ],
       callToAction: {
-        targetBlank: true,
-        text: 'Free 7-day trial',
-        href: '/',
+        text: 'Get Started Free',
+        href: '/sign-up',
       },
       hasRibbon: false,
     },
     {
-      title: 'standard',
-      price: 69,
+      title: 'Pro',
+      subtitle: 'Most popular choice',
+      price: 12,
       period: 'per month',
       items: [
-        {
-          description: 'Proin vel laoreet',
-        },
-        {
-          description: 'Ut efficitur egestas',
-        },
-        {
-          description: 'Pellentesque ut nibh',
-        },
-        {
-          description: 'Donec fringilla sem',
-        },
+        { description: 'Unlimited mock interviews' },
+        { description: 'Advanced AI feedback' },
+        { description: 'Voice & text mode' },
+        { description: 'Progress analytics' },
+        { description: 'Priority support' },
       ],
       callToAction: {
-        targetBlank: true,
-        text: 'Free 15-day trial',
-        href: '/',
+        text: 'Start Free Trial',
+        href: '/sign-up',
       },
       hasRibbon: true,
-      ribbonTitle: 'Popular',
+      ribbonTitle: 'Most Popular',
     },
     {
-      title: 'premium',
-      price: 199,
-      period: 'per month',
+      title: 'Enterprise',
+      subtitle: 'For teams and organizations',
+      price: 0,
+      period: 'contact us',
       items: [
-        {
-          description: 'Curabitur suscipit risus',
-        },
-        {
-          description: 'Aliquam blandit malesuada',
-        },
-        {
-          description: 'Suspendisse sit amet',
-        },
-        {
-          description: 'Suspendisse auctor dui',
-        },
+        { description: 'Everything in Pro' },
+        { description: 'Team accounts' },
+        { description: 'Custom AI training' },
+        { description: 'API access' },
+        { description: 'Dedicated support' },
       ],
       callToAction: {
-        targetBlank: true,
-        text: 'Free 30-day trial',
-        href: '/',
+        text: 'Contact Us',
+        href: '/contact',
       },
       hasRibbon: false,
     },

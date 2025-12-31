@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import { IconRss } from '@tabler/icons-react';
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { useOnClickOutside } from '~/hooks/useOnClickOutside';
 import ToggleDarkMode from '~/components/atoms/ToggleDarkMode';
 import Link from 'next/link';
@@ -171,6 +172,27 @@ const Header = () => {
                 ))}
               </div>
             )}
+            <SignedOut>
+              <div className="ml-4 rtl:ml-0 rtl:mr-4">
+                <Link
+                  href="/sign-in"
+                  className="btn btn-primary py-2 px-5 text-sm font-semibold shadow-none md:px-6"
+                >
+                  Sign In
+                </Link>
+              </div>
+            </SignedOut>
+            <SignedIn>
+              <div className="ml-4 rtl:ml-0 rtl:mr-4 flex items-center space-x-4">
+                <Link
+                  href="/dashboard"
+                  className="btn btn-primary py-2 px-5 text-sm font-semibold shadow-none md:px-6"
+                >
+                  Dashboard
+                </Link>
+                <UserButton afterSignOutUrl="/" />
+              </div>
+            </SignedIn>
           </div>
         </div>
       </div>

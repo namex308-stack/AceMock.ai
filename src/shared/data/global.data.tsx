@@ -25,38 +25,16 @@ export const announcementData: AnnouncementProps = {
 export const headerData: HeaderProps = {
   links: [
     {
-      label: 'Pages',
-      icon: IconChevronDown,
-      links: [
-        {
-          label: 'Services',
-          href: '/services',
-        },
-        {
-          label: 'Pricing',
-          href: '/pricing',
-        },
-        {
-          label: 'About us',
-          href: '/about',
-        },
-        {
-          label: 'Contact us',
-          href: '/contact',
-        },
-        {
-          label: 'FAQs',
-          href: '/faqs',
-        },
-        {
-          label: 'Terms & Conditions',
-          href: '/terms',
-        },
-        {
-          label: 'Privacy Policy',
-          href: '/privacy',
-        },
-      ],
+      label: 'Home',
+      href: '/',
+    },
+    {
+      label: 'About',
+      href: '/about',
+    },
+    {
+      label: 'Pricing',
+      href: '/pricing',
     },
     {
       label: 'Blog',
@@ -67,13 +45,7 @@ export const headerData: HeaderProps = {
       href: '/contact',
     },
   ],
-  actions: [
-    {
-      text: 'Download',
-      href: 'https://github.com/onwidget/tailnext',
-      targetBlank: true,
-    },
-  ],
+  actions: [],
   isSticky: true,
   showToggleTheme: true,
   showRssFeed: false,
@@ -82,7 +54,7 @@ export const headerData: HeaderProps = {
 
 // Footer data
 export const footerData: FooterProps = {
-  title: 'TailNext',
+  title: 'AceMock.ai',
   links: [
     {
       label: 'Terms & Conditions',
