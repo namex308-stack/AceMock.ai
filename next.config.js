@@ -9,20 +9,14 @@ echo   basePath: SITE.basePathname !== '/' ? SITE.basePathname : '',
 echo   swcMinify: true,
 echo   poweredByHeader: false,
 echo.
-echo   output: 'standalone',  // مهم جدًا: يدعم الصفحات الديناميكية
+echo   output: 'standalone',
 echo.
 echo   images: {
 echo     remotePatterns: [
-echo       {
-echo         protocol: 'https',
-echo         hostname: 'images.unsplash.com',
-echo       },
-echo       {
-echo         protocol: 'https',
-echo         hostname: 'source.unsplash.com',
-echo       },
-echo     ],
-echo   },
+echo       { protocol: 'https', hostname: 'images.unsplash.com' },
+echo       { protocol: 'https', hostname: 'source.unsplash.com' }
+echo     ]
+echo   }
 echo };
 echo.
 echo module.exports = nextConfig;
