@@ -1,14 +1,12 @@
 const SITE = require('./src/config.js').SITE;
-
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
-
   trailingSlash: SITE.trailingSlash,
   basePath: SITE.basePathname !== '/' ? SITE.basePathname : '',
-
   swcMinify: true,
   poweredByHeader: false,
+  output: 'standalone',   // ← أضف السطر ده بالضبط
   images: {
     remotePatterns: [
       {
@@ -20,5 +18,7 @@ module.exports = {
         hostname: 'source.unsplash.com',
       },
     ],
-  }
+  },
 };
+
+module.exports = nextConfig;
