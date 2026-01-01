@@ -1,4 +1,5 @@
 const SITE = require('./src/config.js').SITE;
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -6,7 +7,13 @@ const nextConfig = {
   basePath: SITE.basePathname !== '/' ? SITE.basePathname : '',
   swcMinify: true,
   poweredByHeader: false,
-  output: 'standalone',   // ← أضف السطر ده بالضبط
+  
+  // أضف السطرين دول بالضبط ← دول اللي هيحلوا كل المشاكل
+  output: 'standalone',        // يمنع الـ static export ويخلي الديناميكية تشتغل
+  experimental: {
+    serverActions: true,       // لو في server actions في المشروع
+  },
+
   images: {
     remotePatterns: [
       {
